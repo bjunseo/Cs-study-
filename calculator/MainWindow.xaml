@@ -1,0 +1,48 @@
+﻿<Window x:Class="calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculator"
+        mc:Ignorable="d"
+        Background="Black"
+        Title="calculator" Height="700" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="Retext" Grid.ColumnSpan = "4" FontSize="60" Margin="30" >0</TextBox>
+
+        <Button Grid.Row="1" Grid.Column="0" Margin="5" FontSize="30" Click="btn_click">1</Button>
+        <Button Grid.Row="1" Grid.Column="1" Margin="5" FontSize="30" Click="btn_click">2</Button>
+        <Button Grid.Row="1" Grid.Column="2" Margin="5" FontSize="30" Click="btn_click">3</Button>
+        <Button Grid.Row="1" Grid.Column="3" Margin="5" FontSize="30" Click="btnOp_click">+</Button>
+        <Button Grid.Row="2" Grid.Column="0" Margin="5" FontSize="30" Click="btn_click">4</Button>
+        <Button Grid.Row="2" Grid.Column="1" Margin="5" FontSize="30" Click="btn_click">5</Button>
+        <Button Grid.Row="2" Grid.Column="2" Margin="5" FontSize="30" Click="btn_click">6</Button>
+        <Button Grid.Row="2" Grid.Column="3" Margin="5" FontSize="30" Click="btnOp_click">-</Button>
+        <Button Grid.Row="3" Grid.Column="0" Margin="5" FontSize="30" Click="btn_click">7</Button>
+        <Button Grid.Row="3" Grid.Column="1" Margin="5" FontSize="30" Click="btn_click">8</Button>
+        <Button Grid.Row="3" Grid.Column="2" Margin="5" FontSize="30" Click="btn_click">9</Button>
+        <Button Grid.Row="3" Grid.Column="3" Margin="5" FontSize="30" Click="btnOp_click">×</Button>
+        <Button Grid.Row="4" Grid.Column="0" Margin="5" FontSize="30" Click="btnPoint_click">.</Button>
+        <Button Grid.Row="4" Grid.Column="1" Margin="5" FontSize="30" Click="btn_click">0</Button>
+        <Button Grid.Row="4" Grid.Column="2" Margin="5" FontSize="30" Click="Equal_click">=</Button>
+        <Button Grid.Row="4" Grid.Column="3" Margin="5" FontSize="30" Click="btnOp_click">÷</Button>
+        <Button Grid.Row="5" Grid.ColumnSpan ="2" Margin="5" FontSize="25" Click="reset_click">C</Button>
+        <Button Grid.Row="5" Grid.Column="2" Margin="5" FontSize="25" Click="btnFac_click">!</Button>
+        <Button Grid.Row="5" Grid.Column="3" Margin="5" FontSize="25" Click="btnOp_click">^</Button>
+    </Grid>
+</Window>
