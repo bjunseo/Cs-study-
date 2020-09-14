@@ -5,24 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:controler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Background="Gray" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ComboBox Margin="15,40,15,40" Grid.ColumnSpan="2" Name="PortList" SelectionChanged="comboBox_SelectionChanged" FontSize="40">
-               
+
+        <ComboBox Margin="20,10,20,10" Grid.Row="1" Grid.ColumnSpan="4" Name="PortList" SelectionChanged="comboBox_SelectionChanged" FontSize="40">
         </ComboBox>
-        <TextBlock Name="NowPort" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="2" Margin="15,40,15,40" FontSize="40">0</TextBlock>
-        <TextBlock Name="view" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="4" FontSize="60">0</TextBlock>
+        <Button Margin="20,10,20,10" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" FontSize="30">연결하기</Button>
+        <Button Margin="20,10,20,10" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" FontSize="30">연결끊기</Button>
+        <TextBlock Grid.Row="3" VerticalAlignment="Bottom" FontSize="20">연결 상태</TextBlock>
+        <TextBlock FontSize="20" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">수신</TextBlock>
+        <TextBlock Name="recive" Background="White" Margin="10,10,20,20" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="60">0</TextBlock>
+        <TextBlock FontSize="20" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Bottom">송신</TextBlock>
+        <TextBlock Name="send" Background="White" Margin="10,10,20,20" Grid.Column="4" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="60">0</TextBlock>
     </Grid>
 </Window>

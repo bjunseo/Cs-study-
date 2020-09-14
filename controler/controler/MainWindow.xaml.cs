@@ -38,7 +38,6 @@ namespace controler
                 if(PORT != null)
                 {
                     string nowPORT = PORT.Content.ToString();
-                    NowPort.Text = nowPORT;
                 }
             }
         }
