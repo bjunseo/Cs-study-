@@ -25,11 +25,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">Port</TextBlock>
-        <ComboBox Margin="20,20,20,20" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Name="PortList" SelectionChanged="comboBox_SelectionChanged" FontSize="40">
+        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" IsEnabled="True">Port</TextBlock>
+        <ComboBox Margin="20,20,20,20" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Name="PortList"  FontSize="40">
         </ComboBox>
         <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2">Boud rate</TextBlock>
-        <ComboBox Margin="20,20,20,20" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Name="baudrate" SelectionChanged="comboBox_SelectionChanged" FontSize="40">
+        <ComboBox Margin="20,20,20,20" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Name="baudrate" FontSize="40">
             <ComboBoxItem>9600</ComboBoxItem>
             <ComboBoxItem>19200</ComboBoxItem>
             <ComboBoxItem>38400</ComboBoxItem>
