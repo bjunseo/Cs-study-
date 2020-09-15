@@ -20,14 +20,12 @@ namespace controler
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {          
+    {
         public MainWindow()
         {
             InitializeComponent();
             PortList.ItemsSource = SerialPort.GetPortNames();
         }
-
-        
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -42,5 +40,12 @@ namespace controler
             }
         }
 
+        private void click_startBTN(object sender, RoutedEventArgs e)
+        {
+            /*if(!serialPort1.IsOpen)
+            {
+
+            }*/
+        }
     }
 }
