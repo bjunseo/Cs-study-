@@ -35,27 +35,54 @@ namespace controler
             }
         }
 
-        private void click_startBTN(object sender, RoutedEventArgs e)
+        private void open_btn(object sender, RoutedEventArgs e)
         {
+            test.Text = baudrate.SelectedItem.ToString() + PortList.SelectedItem.ToString();
+            string item;
+            string[] _baudrate;
             _serialPort = new SerialPort();
-            if(_serialPort.IsOpen)
+            if(_serialPort.IsOpen == false)
             {
-                _serialPort.PortName = PortList.DataContext.ToString();
-                _serialPort.BaudRate = (int)baudrate.DataContext;
+                _serialPort.PortName = PortList.SelectedItem.ToString();
+                item = baudrate.SelectedItem.ToString();
+                _baudrate = item.Split(":");
+                _serialPort.BaudRate = int.Parse(_baudrate[1]);
                 _serialPort.DataBits = (int)8;
                 _serialPort.Parity = Parity.None;
                 _serialPort.StopBits = StopBits.One;
                 _serialPort.ReadTimeout = (int)500;
                 _serialPort.WriteTimeout = (int)500;
-                //_serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
+                _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
 
                 _serialPort.Open();
 
                 status.Text = "연결되었습니다.";
-                PortList.IsEnabled = false;
             }
             else
-                status.Text = "연결되어있습니다.";
+                status.Text = "연결되어 있습니다.";
         }
+        private void close_btn(object sender, RoutedEventArgs e)
+        {
+            if (_serialPort.IsOpen == true)
+            {
+                _serialPort.Close();
+                status.Text = "해제되었습니다.";
+            }
+            else
+                status.Text = "해제외어 있습니다"; 
+        }
+
+        private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            
+        }
+
+        private void MySerialReceived(object s, EventArgs e)
+        {
+            string ReceivedData = _serialPort.ReadLine();
+            receive.Text = receive.Text + string.Format("{0:x2}", ReceivedData);
+        }
+
+       
     }
 }

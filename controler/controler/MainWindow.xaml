@@ -25,10 +25,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" IsEnabled="True">Port</TextBlock>
-        <ComboBox Margin="20,20,20,20" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Name="PortList"  FontSize="40">
+        <TextBox x:Name="test" Grid.ColumnSpan="4"></TextBox>
+        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" >Port</TextBlock>
+        <ComboBox Margin="20,20,20,20" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Name="PortList" FontSize="40">
         </ComboBox>
-        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2">Boud rate</TextBlock>
+        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" >Boud rate</TextBlock>
         <ComboBox Margin="20,20,20,20" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Name="baudrate" FontSize="40">
             <ComboBoxItem>9600</ComboBoxItem>
             <ComboBoxItem>19200</ComboBoxItem>
@@ -41,11 +42,11 @@
         </ComboBox>
         <TextBlock Margin="20,0,0,0" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Bottom" FontSize="20">연결 상태</TextBlock>
         <TextBlock Name="status" Margin="20,20,20,20" Grid.Row="4" Grid.ColumnSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30">연결 안됨</TextBlock>
-        <Button Margin="20,10,20,20" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" FontSize="30" Click="click_startBTN">연결하기</Button>
-        <Button Margin="20,10,20,20" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" FontSize="30">연결끊기</Button>
+        <Button Margin="20,10,20,20" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" FontSize="30" Click="open_btn">연결하기</Button>
+        <Button Margin="20,10,20,20" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" FontSize="30" Click="close_btn">연결끊기</Button>
         
         <TextBlock FontSize="20" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">수신</TextBlock>
-        <TextBlock Name="recive" Background="White" Margin="10,10,20,20" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="60"></TextBlock>
+        <TextBlock Name="receive" Background="White" Margin="10,10,20,20" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="60"></TextBlock>
         <TextBlock FontSize="20" Grid.Column="4" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Bottom">송신</TextBlock>
         <TextBlock Name="send" Background="White" Margin="10,10,20,20" Grid.Column="4" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="60"></TextBlock>
     </Grid>
