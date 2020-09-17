@@ -45,31 +45,31 @@ namespace controler
             {
                 _serialPort.PortName = PortList.SelectedItem.ToString();
                 item = baudrate.SelectedItem.ToString();
-                _baudrate = item.Split(":");
+                _baudrate = item.Split(": ");
                 _serialPort.BaudRate = int.Parse(_baudrate[1]);
                 _serialPort.DataBits = (int)8;
                 _serialPort.Parity = Parity.None;
                 _serialPort.StopBits = StopBits.One;
                 _serialPort.ReadTimeout = (int)500;
                 _serialPort.WriteTimeout = (int)500;
-                _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
+                _serialPort.DataReceived += new SerialDataReceivedEventHandler(MySerialReceived);
 
                 _serialPort.Open();
 
-                status.Text = "연결되었습니다.";
+                status.Text = _serialPort.PortName + "연결되었습니다.";
             }
             else
-                status.Text = "연결되어 있습니다.";
+                status.Text = _serialPort.PortName + "연결되어 있습니다.";
         }
         private void close_btn(object sender, RoutedEventArgs e)
         {
             if (_serialPort.IsOpen == true)
             {
                 _serialPort.Close();
-                status.Text = "해제되었습니다.";
+                status.Text = _serialPort.PortName + "해제되었습니다.";
             }
             else
-                status.Text = "해제외어 있습니다"; 
+                status.Text = _serialPort.PortName + "해제되어 있습니다"; 
         }
 
         private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -79,7 +79,7 @@ namespace controler
 
         private void MySerialReceived(object s, EventArgs e)
         {
-            string ReceivedData = _serialPort.ReadLine();
+            string ReceivedData = _serialPort.ReadExisting();
             receive.Text = receive.Text + string.Format("{0:x2}", ReceivedData);
         }
 
