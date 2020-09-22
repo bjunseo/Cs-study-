@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.IO.Ports;
-using System.IO;
+using System.Threading;
 
 namespace controler
 {
@@ -37,7 +27,6 @@ namespace controler
 
         private void open_btn(object sender, RoutedEventArgs e)
         {
-            test.Text = baudrate.SelectedItem.ToString() + PortList.SelectedItem.ToString();
             string item;
             string[] _baudrate;
             _serialPort = new SerialPort();
@@ -52,7 +41,7 @@ namespace controler
                 _serialPort.StopBits = StopBits.One;
                 _serialPort.ReadTimeout = (int)500;
                 _serialPort.WriteTimeout = (int)500;
-                _serialPort.DataReceived += new SerialDataReceivedEventHandler(MySerialReceived);
+                _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
 
                 _serialPort.Open();
 
@@ -74,15 +63,13 @@ namespace controler
 
         private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            
+            Dispatcher.Invoke(new EventHandler(MySerialReceived));
+            //invoke
         }
-
         private void MySerialReceived(object s, EventArgs e)
         {
-            string ReceivedData = _serialPort.ReadExisting();
-            receive.Text = receive.Text + string.Format("{0:x2}", ReceivedData);
+            string ReceiveData = _serialPort.ReadExisting();
+            receive.Text = string.Format("{0:X2}", ReceiveData);
         }
-
-       
     }
 }
