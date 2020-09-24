@@ -1,19 +1,20 @@
 ﻿using System;
-using System.Windows.Threading;
-using System.Windows;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.IO.Ports;
-using System.Threading;
 
-namespace controler
+namespace serial_master
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class Form1 : Form
     {
         private SerialPort _serialPort;
-
-        public MainWindow()
+        public Form1()
         {
             InitializeComponent();
             string[] Portnom = SerialPort.GetPortNames();
@@ -24,12 +25,12 @@ namespace controler
             }
         }
 
-        private void open_btn(object sender, RoutedEventArgs e)
+        private void Connect_Click(object sender, EventArgs e)
         {
             string item;
             string[] _baudrate;
             _serialPort = new SerialPort();
-            if(_serialPort.IsOpen == false)
+            if (_serialPort.IsOpen == false)
             {
                 _serialPort.PortName = PortList.SelectedItem.ToString();
                 item = baudrate.SelectedItem.ToString();
@@ -49,7 +50,8 @@ namespace controler
             else
                 status.Text = _serialPort.PortName + "연결되어 있습니다.";
         }
-        private void close_btn(object sender, RoutedEventArgs e)
+
+        private void Unconnect_Click(object sender, EventArgs e)
         {
             if (_serialPort.IsOpen == true)
             {
@@ -57,18 +59,18 @@ namespace controler
                 status.Text = _serialPort.PortName + "해제되었습니다.";
             }
             else
-                status.Text = _serialPort.PortName + "해제되어 있습니다"; 
+                status.Text = _serialPort.PortName + "해제되어 있습니다";
         }
 
         private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            Dispatcher.Invoke(new EventHandler(MySerialReceived));
+            this.Invoke(new EventHandler(MySerialReceived));
             //invoke
         }
         private void MySerialReceived(object s, EventArgs e)
         {
             string ReceiveData = _serialPort.ReadExisting();
-            receive.Text = string.Format("{0:X2}", ReceiveData);
+            Receive.Text = string.Format("{0:X2}", ReceiveData);
         }
     }
 }

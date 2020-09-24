@@ -1,0 +1,31 @@
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\serial master.exe
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.csprojAssemblyReference.cache
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial_master.Form1.resources
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.csproj.GenerateResource.cache
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.AssemblyInfo.cs
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\serial master.deps.json
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\serial master.runtimeconfig.json
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\serial master.runtimeconfig.dev.json
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\serial master.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\serial master.pdb
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\System.IO.Ports.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\linux\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\osx\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.IO.Ports.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.csproj.CopyComplete
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.dll
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.pdb
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.genruntimeconfig.cache
