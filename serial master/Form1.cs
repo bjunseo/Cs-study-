@@ -30,13 +30,10 @@ namespace serial_master
 
         private void Connect_Click(object sender, EventArgs e)
         {
-            string item;
-            string[] _baudrate;
             _serialPort = new SerialPort();
             if (_serialPort.IsOpen == false)
             {
                 _serialPort.PortName = PortList.SelectedItem.ToString();
-               
                 _serialPort.BaudRate = int.Parse(baudrate.SelectedItem.ToString());
                 _serialPort.DataBits = (int)8;
                 _serialPort.Parity = Parity.None;
@@ -59,6 +56,7 @@ namespace serial_master
             {
                 _serialPort.Close();
                 status.Text = _serialPort.PortName + "해제되었습니다.";
+                Receive.Text = " ";
             }
             else
                 status.Text = _serialPort.PortName + "해제되어 있습니다";
@@ -72,7 +70,12 @@ namespace serial_master
         private void MySerialReceived(object s, EventArgs e)
         {
             string ReceiveData = _serialPort.ReadExisting();
-            Receive.Text = Receive.Text + string.Format("{0:X2}", ReceiveData);
+            Receive.Text += string.Format("{0:X2}", ReceiveData);
+        }
+
+        private void send_btn_Click(object sender, EventArgs e)
+        {
+            _serialPort.Write(send.Text.ToString());
         }
     }
 }
