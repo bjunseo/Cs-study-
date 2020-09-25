@@ -63,9 +63,11 @@
             // 
             // Receive
             // 
+            this.Receive.AcceptsReturn = true;
             this.Receive.Location = new System.Drawing.Point(209, 41);
             this.Receive.Multiline = true;
             this.Receive.Name = "Receive";
+            this.Receive.ShortcutsEnabled = false;
             this.Receive.Size = new System.Drawing.Size(579, 100);
             this.Receive.TabIndex = 4;
             // 

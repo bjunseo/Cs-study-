@@ -23,6 +23,9 @@ namespace serial_master
             {
                 PortList.Items.Add(portnum);
             }
+
+            Receive.Select(Receive.Text.Length, 0);
+            Receive.ScrollToCaret();
         }
 
         private void Connect_Click(object sender, EventArgs e)
@@ -33,9 +36,8 @@ namespace serial_master
             if (_serialPort.IsOpen == false)
             {
                 _serialPort.PortName = PortList.SelectedItem.ToString();
-                item = baudrate.SelectedItem.ToString();
-                _baudrate = item.Split(": ");
-                _serialPort.BaudRate = int.Parse(_baudrate[1]);
+               
+                _serialPort.BaudRate = int.Parse(baudrate.SelectedItem.ToString());
                 _serialPort.DataBits = (int)8;
                 _serialPort.Parity = Parity.None;
                 _serialPort.StopBits = StopBits.One;
@@ -70,7 +72,7 @@ namespace serial_master
         private void MySerialReceived(object s, EventArgs e)
         {
             string ReceiveData = _serialPort.ReadExisting();
-            Receive.Text = string.Format("{0:X2}", ReceiveData);
+            Receive.Text = Receive.Text + string.Format("{0:X2}", ReceiveData);
         }
     }
 }
