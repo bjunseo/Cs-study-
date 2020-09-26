@@ -24,7 +24,7 @@ namespace serial_master
                 PortList.Items.Add(portnum);
             }
 
-            Receive.Select(Receive.Text.Length, 0);
+            Receive.SelectionStart = Receive.Text.Length;
             Receive.ScrollToCaret();
         }
 

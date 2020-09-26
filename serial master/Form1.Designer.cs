@@ -72,11 +72,12 @@
             // Receive
             // 
             this.Receive.AcceptsReturn = true;
+            this.Receive.AllowDrop = true;
             this.Receive.Location = new System.Drawing.Point(209, 33);
             this.Receive.Multiline = true;
             this.Receive.Name = "Receive";
             this.Receive.ShortcutsEnabled = false;
-            this.Receive.Size = new System.Drawing.Size(579, 100);
+            this.Receive.Size = new System.Drawing.Size(562, 100);
             this.Receive.TabIndex = 4;
             // 
             // status
@@ -139,7 +140,7 @@
             this.send.Location = new System.Drawing.Point(209, 175);
             this.send.Multiline = true;
             this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(579, 100);
+            this.send.Size = new System.Drawing.Size(562, 100);
             this.send.TabIndex = 12;
             // 
             // label4
@@ -162,7 +163,7 @@
             // 
             // send_btn
             // 
-            this.send_btn.Location = new System.Drawing.Point(713, 290);
+            this.send_btn.Location = new System.Drawing.Point(696, 281);
             this.send_btn.Name = "send_btn";
             this.send_btn.Size = new System.Drawing.Size(75, 23);
             this.send_btn.TabIndex = 15;
