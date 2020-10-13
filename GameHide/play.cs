@@ -48,6 +48,7 @@ namespace GameHide
             Button btnj = CreateButton("j", "J");
             Button btnk = CreateButton("k", "K");
             Button btnl = CreateButton("l", "L");
+            Button btn_Delete = CreateButton("delete", "←delete");
 
             Button btnz = CreateButton("z", "Z");
             Button btnx = CreateButton("x", "X");
@@ -56,6 +57,8 @@ namespace GameHide
             Button btnb = CreateButton("b", "B");
             Button btnn = CreateButton("n", "N");
             Button btnm = CreateButton("m", "M");
+            Button btn_Enter = CreateButton("enter", "↲Enter");
+
 
 
             key.Controls.Add(btn1, 0, 0); 
@@ -89,6 +92,7 @@ namespace GameHide
             key.Controls.Add(btnj, 6, 2);
             key.Controls.Add(btnk, 7, 2);
             key.Controls.Add(btnl, 8, 2);
+            key.Controls.Add(btn_Delete, 9, 2);
 
             key.Controls.Add(btnz, 1, 3);
             key.Controls.Add(btnx, 2, 3);
@@ -97,6 +101,7 @@ namespace GameHide
             key.Controls.Add(btnb, 5, 3);
             key.Controls.Add(btnn, 6, 3);
             key.Controls.Add(btnm, 7, 3);
+            key.Controls.Add(btn_Enter, 8, 3);
         }
 
         public Button CreateButton(string name, string text)
@@ -105,8 +110,34 @@ namespace GameHide
             btn.Name = name;
             btn.Text = text;
             btn.Dock = DockStyle.Fill;
+            btn.Click += btn_Click;  
 
             return btn;
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn.Name == "enter")
+            {
+                if (password.Text == "123456789")
+                {
+                    setting display = new setting();
+                    display.Show();
+                }
+                else
+                {
+                    password.Text = "";
+                }
+            }
+            else if (btn.Name == "delete")
+            {
+                
+            }
+            else
+                password.Text += btn.Name;
+
+            
         }
     }
 }

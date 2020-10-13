@@ -14,3 +14,4 @@ C:\Users\user\Desktop\git\study Cs\GameHide\obj\Debug\netcoreapp3.1\GameHide.dll
 C:\Users\user\Desktop\git\study Cs\GameHide\obj\Debug\netcoreapp3.1\GameHide.pdb
 C:\Users\user\Desktop\git\study Cs\GameHide\obj\Debug\netcoreapp3.1\GameHide.genruntimeconfig.cache
 C:\Users\user\Desktop\git\study Cs\GameHide\obj\Debug\netcoreapp3.1\GameHide.play.resources
+C:\Users\user\Desktop\git\study Cs\GameHide\obj\Debug\netcoreapp3.1\GameHide.setting.resources

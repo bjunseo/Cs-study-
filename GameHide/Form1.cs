@@ -61,6 +61,10 @@ namespace GameHide
                     play display = new play();
                     display.Show();
                 }
+                else
+                {
+                    UnHook();
+                }
                 return (IntPtr)1;
             }
             else
@@ -70,7 +74,6 @@ namespace GameHide
         private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             UnHook();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
