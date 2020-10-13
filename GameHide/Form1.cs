@@ -50,7 +50,7 @@ namespace GameHide
         {
             UnhookWindowsHookEx(hhook);
         }
-
+        
         public static IntPtr hookProc(int code, IntPtr wParam, IntPtr lParam)
         {
             if (code >= 0 && wParam == (IntPtr)WM_KEYDOWN)
@@ -61,9 +61,10 @@ namespace GameHide
                     play display = new play();
                     display.Show();
                 }
-                else
+                else if(vkCode.ToString() == "112")
                 {
-                    UnHook();
+                    Display stream = new Display();
+                    stream.Show();
                 }
                 return (IntPtr)1;
             }

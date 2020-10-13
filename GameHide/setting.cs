@@ -17,7 +17,17 @@ namespace GameHide
 
         private void setting_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int ver = int.Parse(vertical.Text.ToString());
+            int hoz = int.Parse(horizontal.Text.ToString());
+            Display stream = new Display();
+            stream.Vertical = ver;
+            stream.Holizontal = hoz;
+            stream.ShowDialog();
         }
     }
 }
