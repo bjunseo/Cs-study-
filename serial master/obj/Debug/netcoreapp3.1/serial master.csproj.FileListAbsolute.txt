@@ -24,8 +24,10 @@ C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtime
 C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
 C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.csproj.CopyComplete
 C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.dll
 C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.pdb
 C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.genruntimeconfig.cache
+C:\Users\user\Desktop\git\study Cs\serial master\bin\Debug\netcoreapp3.1\System.Windows.Forms.DataVisualization.dll
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial_master.Chart.resources
+C:\Users\user\Desktop\git\study Cs\serial master\obj\Debug\netcoreapp3.1\serial master.csproj.CoreCompileInputs.cache

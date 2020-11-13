@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.IO.Ports;
 
 namespace serial_master
@@ -14,6 +15,7 @@ namespace serial_master
     public partial class Form1 : Form
     {
         private SerialPort _serialPort;
+        int count, count2;
         public Form1()
         {
             InitializeComponent();
@@ -69,13 +71,18 @@ namespace serial_master
         }
         private void MySerialReceived(object s, EventArgs e)
         {
-            string ReceiveData = _serialPort.ReadExisting();
-            Receive.Text += string.Format("{0:X2}", ReceiveData);
+            string ReceiveData = _serialPort.ReadChar().ToString();
+            Receive.Text = ReceiveData;
         }
 
         private void send_btn_Click(object sender, EventArgs e)
         {
             _serialPort.Write(send.Text.ToString());
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

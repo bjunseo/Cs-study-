@@ -204,6 +204,7 @@
             this.Controls.Add(this.PortList);
             this.Name = "Form1";
             this.Text = "port master";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
