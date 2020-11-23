@@ -98,5 +98,10 @@ namespace calculator
             }
             Retext.Text = factorial.ToString();
         }
+
+        private void btnNext_click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

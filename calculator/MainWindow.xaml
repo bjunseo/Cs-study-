@@ -41,8 +41,9 @@
         <Button Grid.Row="4" Grid.Column="1" Margin="5" FontSize="30" Click="btn_click">0</Button>
         <Button Grid.Row="4" Grid.Column="2" Margin="5" FontSize="30" Click="Equal_click">=</Button>
         <Button Grid.Row="4" Grid.Column="3" Margin="5" FontSize="30" Click="btnOp_click">÷</Button>
-        <Button Grid.Row="5" Grid.ColumnSpan ="2" Margin="5" FontSize="25" Click="reset_click">C</Button>
-        <Button Grid.Row="5" Grid.Column="2" Margin="5" FontSize="25" Click="btnFac_click">!</Button>
-        <Button Grid.Row="5" Grid.Column="3" Margin="5" FontSize="25" Click="btnOp_click">^</Button>
+        <Button Grid.Row="5" Grid.Column="0" Margin="5" FontSize="25" Click="reset_click">C</Button>
+        <Button Grid.Row="5" Grid.Column="1" Margin="5" FontSize="25" Click="btnFac_click">!</Button>
+        <Button Grid.Row="5" Grid.Column="2" Margin="5" FontSize="25" Click="btnOp_click">^</Button>
+        <Button Grid.Row="5" Grid.Column="3" Margin="5" FontSize="25" Click="btnNext_click">Next</Button>
     </Grid>
 </Window>
