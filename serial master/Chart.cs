@@ -14,5 +14,10 @@ namespace serial_master
         {
             InitializeComponent();
         }
+
+        private void Chart_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

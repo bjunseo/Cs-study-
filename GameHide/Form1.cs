@@ -18,7 +18,6 @@ namespace GameHide
             InitializeComponent();
             this.Opacity = 0;
         }
-
         [DllImport("user32.dll")]
         static extern IntPtr SetWindowsHookEx(int idHook, LowLevelKeyboardProc callback, IntPtr hInstance, uint threadId);
 
@@ -30,11 +29,15 @@ namespace GameHide
 
         [DllImport("kernel32.dll")]
         static extern IntPtr LoadLibrary(string lpFileName);
+        [DllImport("user32.dll")]
+        public static extern ushort GetAsyncKeyState(Int32 vkey);
+        [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
+        private static extern IntPtr GetForegroundWindow();
 
         private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
 
-        const int WH_KEYBOARD_LL = 13; 
-        const int WM_KEYDOWN = 0x100; 
+        const int WH_KEYBOARD_LL = 13;
+        const int WM_KEYDOWN = 0x100;
 
         private LowLevelKeyboardProc _proc = hookProc;
 
@@ -50,7 +53,7 @@ namespace GameHide
         {
             UnhookWindowsHookEx(hhook);
         }
-        
+
         public static IntPtr hookProc(int code, IntPtr wParam, IntPtr lParam)
         {
             if (code >= 0 && wParam == (IntPtr)WM_KEYDOWN)
@@ -61,7 +64,7 @@ namespace GameHide
                     play display = new play();
                     display.Show();
                 }
-                else if(vkCode.ToString() == "112")
+                else if (vkCode.ToString() == "112")
                 {
                     Display stream = new Display();
                     stream.Show();
@@ -80,6 +83,10 @@ namespace GameHide
         private void Form1_Load(object sender, EventArgs e)
         {
             SetHook();
+        }
+        private void key_down(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

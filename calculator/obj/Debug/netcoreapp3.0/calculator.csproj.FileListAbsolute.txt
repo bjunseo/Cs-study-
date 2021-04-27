@@ -34,3 +34,5 @@ C:\Users\user\Desktop\git\study Cs\calculator\obj\Debug\netcoreapp3.0\calculator
 C:\Users\user\Desktop\git\study Cs\calculator\obj\Debug\netcoreapp3.0\calculator.pdb
 C:\Users\user\Desktop\git\study Cs\calculator\obj\Debug\netcoreapp3.0\calculator.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\git\study Cs\calculator\obj\Debug\netcoreapp3.0\calculator.genruntimeconfig.cache
+C:\Users\user\Desktop\git\study Cs\calculator\obj\Debug\netcoreapp3.0\key.g.cs
+C:\Users\user\Desktop\git\study Cs\calculator\obj\Debug\netcoreapp3.0\key.baml

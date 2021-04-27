@@ -13,11 +13,18 @@ namespace GameHide
         public setting()
         {
             InitializeComponent();
+            this.FormClosed += setting_Close; 
         }
 
         private void setting_Load(object sender, EventArgs e)
         {
             
+           
+        }
+
+        private void setting_Close(object sender, FormClosedEventArgs e)
+        {
+         
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,7 +34,7 @@ namespace GameHide
             Display stream = new Display();
             stream.Vertical = ver;
             stream.Holizontal = hoz;
-            stream.ShowDialog();
+            this.Close();
         }
     }
 }

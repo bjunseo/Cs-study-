@@ -6,21 +6,23 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace GameHide
 {
     public partial class Display : Form
     {
-        private int Form2_value;
+        private int Ver;
+        private int Hol;
         public int Vertical
         {
-            get { return this.Form2_value; }
-            set { this.Form2_value = value; }
+            get { return this.Ver; }
+            set { this.Ver = value; }
         }
 
         public int Holizontal
         {
-            get { return this.Form2_value; }
-            set { this.Form2_value = value; }
+            get { return this.Hol; }
+            set { this.Hol = value; }
         }
         public Display()
         {
@@ -29,8 +31,7 @@ namespace GameHide
 
         private void Display_Load(object sender, EventArgs e)
         {
-            a.Text = Vertical.ToString();
-            b.Text = Holizontal.ToString();
+            
         }
     }
 }

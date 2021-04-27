@@ -120,7 +120,7 @@ namespace GameHide
             Button btn = sender as Button;
             if (btn.Name == "enter")
             {
-                if (password.Text == "123456789")
+                if (password.Text == "1")
                 {
                     setting display = new setting();
                     display.Show();
@@ -132,7 +132,6 @@ namespace GameHide
             }
             else if (btn.Name == "delete")
             {
-                
             }
             else
                 password.Text += btn.Name;

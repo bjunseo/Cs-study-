@@ -1,0 +1,11 @@
+C:\Users\user\Desktop\git\study Cs\serial_master\bin\Debug\serial_master.exe.config
+C:\Users\user\Desktop\git\study Cs\serial_master\bin\Debug\serial_master.exe
+C:\Users\user\Desktop\git\study Cs\serial_master\bin\Debug\serial_master.pdb
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.csprojAssemblyReference.cache
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.Form1.resources
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.Properties.Resources.resources
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.csproj.GenerateResource.cache
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.exe
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.pdb
+C:\Users\user\Desktop\git\study Cs\serial_master\obj\Debug\serial_master.chart.resources

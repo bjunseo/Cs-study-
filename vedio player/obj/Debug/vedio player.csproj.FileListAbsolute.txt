@@ -1,0 +1,31 @@
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\vedio player.exe.config
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\vedio player.exe
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\vedio player.pdb
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio player.csprojAssemblyReference.cache
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio_player.display.resources
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio_player.Form1.resources
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio_player.key.resources
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio_player.Properties.Resources.resources
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio_player.setting.resources
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio player.csproj.GenerateResource.cache
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio player.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio player.exe
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio player.pdb
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Controls.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Imaging.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Math.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Video.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.xml
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Controls.xml
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Imaging.xml
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Math.xml
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Video.xml
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\Interop.WMPLib.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\Interop.WMPLib.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio player.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\git\study Cs\vedio player\obj\Debug\vedio player.csproj.CopyComplete

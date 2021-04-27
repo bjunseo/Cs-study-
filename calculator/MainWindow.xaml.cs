@@ -101,7 +101,8 @@ namespace calculator
 
         private void btnNext_click(object sender, EventArgs e)
         {
-
+            key k = new key();
+            k.Show();
         }
     }
 }

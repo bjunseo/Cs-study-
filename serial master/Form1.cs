@@ -29,20 +29,26 @@ namespace serial_master
             Receive.SelectionStart = Receive.Text.Length;
             Receive.ScrollToCaret();
         }
-
         private void Connect_Click(object sender, EventArgs e)
         {
             _serialPort = new SerialPort();
             if (_serialPort.IsOpen == false)
-            {
-                _serialPort.PortName = PortList.SelectedItem.ToString();
-                _serialPort.BaudRate = int.Parse(baudrate.SelectedItem.ToString());
-                _serialPort.DataBits = (int)8;
-                _serialPort.Parity = Parity.None;
-                _serialPort.StopBits = StopBits.One;
-                _serialPort.ReadTimeout = (int)500;
-                _serialPort.WriteTimeout = (int)500;
-                _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
+            { 
+                try
+                {
+                    _serialPort.PortName = PortList.SelectedItem.ToString();
+                    _serialPort.BaudRate = int.Parse(baudrate.SelectedItem.ToString());
+                    _serialPort.DataBits = (int)8;
+                    _serialPort.Parity = Parity.None;
+                    _serialPort.StopBits = StopBits.One;
+                    _serialPort.ReadTimeout = (int)500;
+                    _serialPort.WriteTimeout = (int)500;
+                    _serialPort.DataReceived += new SerialDataReceivedEventHandler(serialPort_DataReceived);
+                }
+                catch (NullReferenceException ex)
+                {
+                    MessageBox.Show("port not connect","error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
 
                 _serialPort.Open();
 
@@ -51,7 +57,6 @@ namespace serial_master
             else
                 status.Text = _serialPort.PortName + "연결되어 있습니다.";
         }
-
         private void Unconnect_Click(object sender, EventArgs e)
         {
             if (_serialPort.IsOpen == true)
@@ -63,7 +68,6 @@ namespace serial_master
             else
                 status.Text = _serialPort.PortName + "해제되어 있습니다";
         }
-
         private void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             this.Invoke(new EventHandler(MySerialReceived));
@@ -77,7 +81,17 @@ namespace serial_master
 
         private void send_btn_Click(object sender, EventArgs e)
         {
-            _serialPort.Write(send.Text.ToString());
+            Button btn = sender as Button;
+            if (btn.Name.ToString() == "btn1")  _serialPort.Write(send1.Text.ToString());
+            else if (btn.Name.ToString() == "btn2") _serialPort.Write(send2.Text.ToString());
+            else if (btn.Name.ToString() == "btn3") _serialPort.Write(send3.Text.ToString());
+            else if (btn.Name.ToString() == "btn4") _serialPort.Write(send4.Text.ToString());
+        }
+
+        private void chart_Click(object sender, EventArgs e)
+        {
+            Chart chart = new Chart();
+            chart.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
