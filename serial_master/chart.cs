@@ -13,6 +13,7 @@ namespace serial_master
 {
     public partial class chart : Form
     {
+        double x = 0;
         public chart()
         {
             InitializeComponent();
@@ -20,28 +21,34 @@ namespace serial_master
 
         private void chart_Load(object sender, EventArgs e)
         {
-            //timer1.Tick += timer1_Tick;
-            //timer1.Interval = 2000;
+            timer1.Tick += timer1_Tick;
+            timer1.Interval = 1000;
 
             chart1.Series[0].ChartType = SeriesChartType.Line;
             chart1.Series[0].MarkerSize = 20;
+        }
+
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            chart1.Series[0].Points.AddXY(x, x);
 
             chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.White;
             chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.White;
-            chart1.ChartAreas[0].AxisX.Minimum = 0;
-            chart1.ChartAreas[0].AxisX.Maximum = 5;
-            chart1.Series[0].Points.AddXY(1, 1);
-            chart1.Series[0].Points.AddXY(2, 2);
-            chart1.Series[0].Points.AddXY(3, 3);
-            chart1.Series[0].Points.AddXY(4, 4);
+            chart1.ChartAreas[0].AxisX.Minimum = chart1.Series[0].Points[0].XValue;
+            chart1.ChartAreas[0].AxisX.Maximum = x;
 
+            x += 1;
         }
 
-        /*
-        private void timer1_Tick(object sender, EventArgs e)
+        private void start_Click(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
-        */
+
+        private void stop_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
     }
 }
